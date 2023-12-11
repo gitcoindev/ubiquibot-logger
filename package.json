@@ -32,12 +32,14 @@
   },
   "exports": {
     ".": {
+      "require": "./dist/logs.js",
       "types": "./dist/logs.d.ts",
-      "default": "./dist/logs.js"
+      "import": "./dist/logs.js"
     },
     "./pretty-logs": {
+      "require": "./dist/pretty-logs.js",
       "types": "./dist/pretty-logs.d.ts",
-      "default": "./dist/pretty-logs.js"
+      "import": "./dist/pretty-logs.js"
     }
   },
   "scripts": {
@@ -64,7 +66,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
-    "@types/node": "^20.10.4",
+    "@types/node": "^20.10.0",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
     "esbuild": "^0.19.8",

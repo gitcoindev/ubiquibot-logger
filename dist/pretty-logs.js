@@ -1,5 +1,40 @@
+"use strict";
+var __create = Object.create;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
 // src/supabase/helpers/tables/pretty-logs.ts
-import util from "util";
+var pretty_logs_exports = {};
+__export(pretty_logs_exports, {
+  LogLevel: () => LogLevel,
+  PrettyLogs: () => PrettyLogs
+});
+module.exports = __toCommonJS(pretty_logs_exports);
+var import_util = __toESM(require("util"));
 var PrettyLogs = class {
   constructor() {
     this.ok = this.ok.bind(this);
@@ -88,7 +123,7 @@ var PrettyLogs = class {
       verbose: "\u{1F4AC}"
     };
     const symbol = defaultSymbols[type];
-    const messageFormatted = typeof message === "string" ? message : util.inspect(message, { showHidden: true, depth: null, breakLength: Infinity });
+    const messageFormatted = typeof message === "string" ? message : import_util.default.inspect(message, { showHidden: true, depth: null, breakLength: Infinity });
     const lines = messageFormatted.split("\n");
     const logString = lines.map((line, index) => {
       const prefix = index === 0 ? `	${symbol}` : `	${" ".repeat(symbol.length)}`;
@@ -119,8 +154,9 @@ var LogLevel = /* @__PURE__ */ ((LogLevel2) => {
   LogLevel2["DEBUG"] = "debug";
   return LogLevel2;
 })(LogLevel || {});
-export {
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
   LogLevel,
   PrettyLogs
-};
-//# sourceMappingURL=pretty-logs.mjs.map
+});
+//# sourceMappingURL=pretty-logs.js.map

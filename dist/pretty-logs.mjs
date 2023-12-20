@@ -123,4 +123,4 @@ export {
   LogLevel,
   PrettyLogs
 };
-//# sourceMappingURL=pretty-logs.js.map
+//# sourceMappingURL=pretty-logs.mjs.map

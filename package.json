@@ -1,10 +1,10 @@
 {
   "name": "ubiquibot-logger",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Ubiquity logging module with Supabase support.",
   "author": "Ubiquity DAO",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
   "tsup": {
     "entry": [
       "src/supabase/helpers/tables/logs.ts",
@@ -19,27 +19,27 @@
   "files": [
     "dist/*"
   ],
-  "main": "./dist/logs.js",
+  "main": "./dist/logs.mjs",
   "typesVersions": {
     "*": {
       ".": [
-        "./dist/logs.d.ts"
+        "./dist/logs.d.mts"
       ],
       "pretty-logs": [
-        "./dist/pretty-logs.d.ts"
+        "./dist/pretty-logs.d.mts"
       ]
     }
   },
   "exports": {
     ".": {
-      "require": "./dist/logs.js",
-      "types": "./dist/logs.d.ts",
-      "import": "./dist/logs.js"
+      "require": "./dist/logs.mjs",
+      "types": "./dist/logs.d.mts",
+      "import": "./dist/logs.mjs"
     },
     "./pretty-logs": {
-      "require": "./dist/pretty-logs.js",
-      "types": "./dist/pretty-logs.d.ts",
-      "import": "./dist/pretty-logs.js"
+      "require": "./dist/pretty-logs.mjs",
+      "types": "./dist/pretty-logs.d.mts",
+      "import": "./dist/pretty-logs.mjs"
     }
   },
   "scripts": {
